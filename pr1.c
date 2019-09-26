@@ -74,5 +74,13 @@ int main(){
 		   }
 	   }
 
-printf("res");
+	   while(countBasketsHead < countBaskets){
+		   mas1[countBasketsHead++]=mas2[--countBasketsTail];
+	   }
+
+	   printf("\nResult mas: \n");
+	   	   for( n = 0 ; n < countBaskets; n++ ) {
+	   		  printf("%d : %d \n", mas1[n].washTime, mas1[n].dryTime);
+	   	   }
+
 }
