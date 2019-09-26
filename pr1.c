@@ -10,6 +10,7 @@
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 
 struct TimeWork{
+	int index;
 	int washTime;
 	int dryTime;
 };
@@ -25,18 +26,23 @@ int cmpfunc (const void * a, const void * b) {
 int main(){
 	int countBaskets = 5;
 	struct TimeWork tm[countBaskets];
+	tm[0].index=0;
 	tm[0].washTime=32;
 	tm[0].dryTime=42;
 
+	tm[1].index=1;
 	tm[1].washTime=47;
 	tm[1].dryTime=15;
 
+	tm[2].index=2;
 	tm[2].washTime=22;
 	tm[2].dryTime=50;
 
+	tm[3].index=3;
 	tm[3].washTime=58;
 	tm[3].dryTime=40;
 
+	tm[4].index=4;
 	tm[4].washTime=31;
 	tm[4].dryTime=28;
 
@@ -80,7 +86,8 @@ int main(){
 
 	   printf("\nResult mas: \n");
 	   	   for( n = 0 ; n < countBaskets; n++ ) {
-	   		  printf("%d : %d \n", mas1[n].washTime, mas1[n].dryTime);
+	   		  printf("%d %d  %d \n", mas1[n].index, mas1[n].washTime, mas1[n].dryTime);
 	   	   }
+
 
 }
